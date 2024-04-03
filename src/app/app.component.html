@@ -16,7 +16,10 @@
     highlighted
   >
 
-    <course-image [src]="course.iconUrl"></course-image>
+    <course-image
+      *ngxUnless="!course.iconUrl"
+      [src]="course.iconUrl"
+    />
 
     <div (dblclick)="highlighter.toggle($event)" class="course-description">
       {{ course.longDescription }}
