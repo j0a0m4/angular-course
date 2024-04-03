@@ -1,0 +1,69 @@
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1.25rem 0;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, .2), 0 2px 8px 0 rgba(0, 0, 0, .14), 0 4px 8px -1px rgba(0, 0, 0, .12);
+}
+
+.course-card .title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.course-card .description {
+  user-select: none;
+  padding: 0 1rem 0 1rem;
+}
+
+.course-card img {
+  border-radius: 0.5rem;
+}
+
+.label {
+  display: inline;
+  margin-bottom: 1.5rem;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid grey;
+  background: #eaeaea;
+}
+
+.beginner .label {
+  background: #dbf1ec;
+}
+
+.intermediate .label {
+  background: #f8e8c5;
+}
+
+.advanced .label {
+  background: #fcd5d5;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  background: #4764d0;
+  color: #ffffff;
+}
+
+.count {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 2rem;
+  background: #e5e3e3;
+}

@@ -1,0 +1,18 @@
+<article [class]="cardCssClass()">
+  <header class="title">{{ course.title }}</header>
+  <section class="content">
+    <img width="300" alt="Angular Logo" [src]="course.iconUrl">
+    <p class="description">{{ course.description }}</p>
+  </section>
+  <section class="label">{{ course.category | titlecase }}</section>
+  <footer>
+    <button (click)="onCourseView()">View Course</button>
+    <span class="count">
+      @if (course.lessonsCount) {
+        {{ course.lessonsCount }}
+      } @else {
+        0
+      }
+    </span>
+  </footer>
+</article>

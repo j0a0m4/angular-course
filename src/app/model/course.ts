@@ -1,10 +1,8 @@
-
-
-export interface Course {
-    id:number;
-    description:string;
-    iconUrl: string;
-    longDescription: string;
-    category:string;
-    lessonsCount:number;
+export type Course = {
+  id: number;
+  title: string;
+  iconUrl: string;
+  description: string;
+  category: string;
+  lessonsCount?: number;
 }
