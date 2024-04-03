@@ -1,32 +1,41 @@
-import {AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import {COURSES} from '../db-data';
-import {Course} from './model/course';
-import {CourseCardComponent} from './course-card/course-card.component';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  QueryList,
+  ViewChildren
+} from "@angular/core";
+import {COURSES} from "../db-data";
+import {CourseCardComponent} from "./course-card/course-card.component";
+import {HighlightToggled} from "./directives/highlighted.directive";
+import {Course} from "./model/course";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent
+  implements AfterViewInit {
 
-    courses = COURSES;
+  courses = COURSES;
 
+  @ViewChildren(CourseCardComponent, {read: ElementRef})
+  cards: QueryList<ElementRef>;
 
-    @ViewChildren(CourseCardComponent, {read: ElementRef})
-    cards : QueryList<ElementRef>;
+  constructor() {
 
+  }
 
-    constructor() {
+  ngAfterViewInit() {
 
-    }
+  }
 
-    ngAfterViewInit() {
+  onSelectCourse(course: Course) {
 
-    }
+  }
 
-    onCourseSelected(course:Course) {
-
-    }
-
+  onHighlightToggle(event: HighlightToggled) {
+    console.log(event);
+  }
 }
